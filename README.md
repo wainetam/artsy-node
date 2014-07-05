@@ -6,7 +6,7 @@
   var artsyClient = require('./artsy-node');
   ```
 
-  Login to www.artsyapi.com with your Artsy.net credentials. Check your browser headers, and look in cookies to find the string associated with '_gravity_session'. Basically, take everything after '_gravity_session=' and config your client. Note that the _gravity_session_string_ needs to be from the cookie associated with logging into www.artsyapi.com, not artsy.net.
+  Log in to www.artsyapi.com with your Artsy.net credentials. Check your browser headers, and look in cookies to find the string associated with 'gravity_session'. Basically, take everything after 'gravity_session=' and config your client. Note that the _gravity_session_string_ needs to be from the cookie associated with logging into www.artsyapi.com, not artsy.net.
   ```
   artsyClient.configure(_gravity_session_string_);
   ```

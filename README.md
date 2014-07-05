@@ -5,8 +5,8 @@
   ```
   var artsyClient = require('./artsy-node');
   ```
-  
-  Login to www.artsyapi.com with your Artsy.net credentials. Check your browser headers and find the string associated with '_gravity_session'. Basically, take everything after '_gravity_session=' and config your client.
+
+  Login to www.artsyapi.com with your Artsy.net credentials. Check your browser headers, and look in cookies to find the string associated with '_gravity_session'. Basically, take everything after '_gravity_session=' and config your client. Note that the _gravity_session_string_ needs to be from the cookie associated with logging into www.artsyapi.com, not artsy.net.
   ```
   artsyClient.configure(_gravity_session_string_);
   ```
@@ -19,9 +19,9 @@
     console.log(data); // display data
   }, function(err) {
     console.log(err); // if error
-  });  
+  });
   ```
-  
+
   To find artworks of an artist:
   ```
   artsyClient.artworks.findByArtist(first, last).then(function(data) { // first and last name are lowercase
@@ -37,7 +37,7 @@
   artsyClient.artist.findByName('piet', 'mondrian').then(function(data) {
     console.log(data);
   }, function(err) {
-  console.log(err); 
+  console.log(err);
   });
   ```
 

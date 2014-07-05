@@ -9,13 +9,14 @@ function get(first, last, type, done) {
   var uri = {
     artist: apiEndpoint + 'artist' + '/' + first + '-' + last,
     artworks: apiEndpoint + 'artist' + '/' + first + '-' + last + '/' + 'artworks'
+    search: apiEndpoint +
   };
 
   var cookie = request.cookie(client.auth.cookieString);
   j.setCookie(cookie, uri);
 
   var options = {
-    method: 'GET',
+    method: 'POST',
     jar: j,
     uri: uri[type],
     json: true,

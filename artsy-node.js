@@ -3,13 +3,13 @@ var request = require('request'),
 
 var apiEndpoint = 'https://artsyapi.com/api/v1/';
 
-function get(first, last, type, done) {
+function get(first, last, type) { // type refers to keys of uri object: artist/artworks/search
   var deferred = Q.defer();
   var j = request.jar();
   var uri = {
     artist: apiEndpoint + 'artist' + '/' + first + '-' + last,
     artworks: apiEndpoint + 'artist' + '/' + first + '-' + last + '/' + 'artworks'
-    search: apiEndpoint +
+    // search: apiEndpoint // more to come!
   };
 
   var cookie = request.cookie(client.auth.cookieString);

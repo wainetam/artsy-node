@@ -1,0 +1,19 @@
+{
+  "name": "artsy-node",
+  "version": "0.0.1",
+  "description": "Node client for Artsy API",
+  "main": "artsy-node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wainetam/artsy-node.git"
+  },
+  "author": "Waine Tam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wainetam/artsy-node/issues"
+  },
+  "homepage": "https://github.com/wainetam/artsy-node"
+}

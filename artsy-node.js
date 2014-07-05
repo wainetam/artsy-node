@@ -16,7 +16,7 @@ function get(first, last, type) { // type refers to keys of uri object: artist/a
   j.setCookie(cookie, uri);
 
   var options = {
-    method: 'POST',
+    method: 'GET',
     jar: j,
     uri: uri[type],
     json: true,

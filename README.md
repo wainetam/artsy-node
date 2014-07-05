@@ -1,6 +1,3 @@
-artsy-node
-==========
-
 # Node client for Artsy API
 
 ## Setup -- No API key necessary!
@@ -9,27 +6,36 @@ artsy-node
   var artsyClient = require('./artsy-node');
   ```
   
-  Login to www.artsyapi.com with your Artsy.net credentials. Check your browser headers and find the string associated with '_gravity_session'. Basically, everything after the equals sign.
+  Login to www.artsyapi.com with your Artsy.net credentials. Check your browser headers and find the string associated with '_gravity_session'. Basically, take everything after '_gravity_session=' and config your client.
   ```
   artsyClient.configure(_gravity_session_string_);
   ```
 ## Basic Usage
-  I've only implemented a few functions related to the API, but will add more:
+  I've only implemented very basic API functionality, but will add more:
 
   To find basic artist info:
   ```
-  artsyClient.artist.findByName(first, last).then(function(data) { // first and last name must be lowercase
+  artsyClient.artist.findByName(first, last).then(function(data) { // first and last name are lowercase
     console.log(data); // display data
   }, function(err) {
     console.log(err); // if error
+  });  
   ```
   
   To find artworks of an artist:
   ```
-  artsyClient.artworks.findByArtist(first, last).then(function(data) { // first and last name must be lowercase
+  artsyClient.artworks.findByArtist(first, last).then(function(data) { // first and last name are lowercase
     console.log(data); // display data
   }, function(err) {
     console.log(err); // if error
+  });
+  ```
+## Examples
+  artsyClient.artist.findByName('georges', 'seurat').then(function(data) {
+    console.log(data);
+  }, function(err) {
+  console.log(err); 
+  });
   ```
 
 ## Credits

@@ -31,7 +31,10 @@
   });
   ```
 ## Examples
-  artsyClient.artist.findByName('georges', 'seurat').then(function(data) {
+
+  Find some info on Mr. Mondrian:
+  ```
+  artsyClient.artist.findByName('piet', 'mondrian').then(function(data) {
     console.log(data);
   }, function(err) {
   console.log(err); 
